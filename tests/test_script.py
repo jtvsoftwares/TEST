@@ -8,7 +8,7 @@ def test_f2():
     assert 50 == jtv.f2()
 
 def test_f3():
-    assert 75 == jtv.f3()
+    assert 76 == jtv.f3()
 
 """
 def test_f4():
