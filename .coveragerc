@@ -1,0 +1,11 @@
+#configuration file for coverage
+
+[run]
+source = jtv_test
+branch = True
+
+[report]
+fail_under = 80
+
+[html]
+directory = .tests/htmlcov
