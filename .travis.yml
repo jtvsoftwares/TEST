@@ -10,8 +10,14 @@ branches:
   only:
     - master
 
+before_install:
+  - pip install coveralls
+
 install: true
 
 script:
   - make dist
   - make test
+
+after_success:
+  - coveralls
