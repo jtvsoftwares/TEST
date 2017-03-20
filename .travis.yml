@@ -18,6 +18,5 @@ install: true
 script:
   - make dist
   - make test
-
-after_success:
   - coveralls
+  
