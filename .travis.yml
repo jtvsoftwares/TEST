@@ -6,6 +6,10 @@ os:
   - linux
 #  - osx
 
+branches:
+  only:
+    - master
+
 install: true
 
 script:
