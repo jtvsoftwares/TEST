@@ -17,7 +17,7 @@ clean-dist:
 
 test: install
 	pip install pytest pytest-cov
-	pytest
+	py.test
 
 clean:
 	-rm -rf .tests
