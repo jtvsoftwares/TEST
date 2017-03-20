@@ -37,6 +37,7 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.tests/
 .coverage
 .coverage.*
 .cache
@@ -87,3 +88,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# PyCharm project settings
+.idea
