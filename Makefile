@@ -16,7 +16,7 @@ clean-dist:
 	-rm -rf dist
 
 test: install
-	pip install pytest pytest-cov
+	pip install mock pytest pytest-cov
 	py.test --junit-xml=.tests/pytest.xml --cov --cov-config=.coveragerc --cov-report=term --cov-report=html tests
 
 clean:

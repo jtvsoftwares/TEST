@@ -2,46 +2,27 @@
 Script with simple functions in them
 """
 
+import json
+from service import Service
 
-def f1():
-    """
-    function 1
-    :return: integer value of 25
-    """
-    val = 100
-    val -= 75
-    return val
+class MyClass(object):
 
+    def __init__(self):
+        self.s = Service()
 
-def f2():
-    """
-    function 2
-    :return: integer value of 50
-    """
-    val = 100
-    sub = 50
-    rez = val - sub
-    return rez
+    def f0(self):
 
+        self.s.do_something('Hello World!')
 
-def f3():
-    """
-    function 3
-    :return: integer value of 75
-    """
-    val = 100
-    sub = 25
-    rez = val - sub
-    return rez
+    def f1(self):
 
+        a = self.s.get_array()
 
-def f4():
-    """
-    function 4
-    :return: integer value of 100
-    """
-    val = 100
-    sub = 0
-    rez = val - sub
-    ret = rez
-    return ret
+        return a
+
+    def f2(self, json_string):
+
+        d = json.loads(json_string)
+        m = self.s.multiply(d['rhs'], d['lhs'])
+
+        return m
