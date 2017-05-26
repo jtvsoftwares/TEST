@@ -1,8 +1,9 @@
 
-all: dist test install
+all: dist install test
 
 install:
 	pip install -U .
+	pip install mock pytest pytest-cov
 
 uninstall:
 	pip uninstall -y jtv_test
@@ -15,8 +16,7 @@ dist:
 clean-dist:
 	-rm -rf dist
 
-test: install
-	pip install mock pytest pytest-cov
+test:
 	py.test --junit-xml=.tests/pytest.xml --cov --cov-config=.coveragerc --cov-report=term --cov-report=html tests
 
 clean:
